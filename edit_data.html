@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</head>
+<body>
+    <h1>add data</h1>
+    <form class="m-5" >
+       
+        <div class=" m-5">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+        </div>
+        <div class=" mx-5">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <input type="email" class="form-control" id="Description" aria-describedby="emailHelp">
+          </div>
+        <div class=" m-5">
+          <label for="exampleInputPassword1" class="form-label">Quantity</label>
+          <input type="text" class="form-control" id="Quantity">
+        </div>
+        <div class=" m-5">
+          <label for="exampleInputPassword1" class="form-label">price</label>
+          <input type="text" class="form-control" id="price">
+        </div>
+        <div class=" m-5">
+        
+         
+        
+        <button type="submit" class="btn btn-primary m-5" id="submit">submit</button>
+        <!-- <button type="submit" class="btn btn-primary m-5" id="login">login</button> -->
+      </form>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-storage.js"></script>
+    <script type="">
+        // Import the functions you need from the SDKs you need
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBlZB9x_wdsc-ayFXUgCmHmgAMYswtR0BY",
+          authDomain: "accounting-project-28748.firebaseapp.com",
+          projectId: "accounting-project-28748",
+          storageBucket: "accounting-project-28748.appspot.com",
+          messagingSenderId: "1023242228263",
+          appId: "1:1023242228263:web:6751d89a2de427ba767402"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+<script src="edit_data.js"></script>
+</body>
+</html>

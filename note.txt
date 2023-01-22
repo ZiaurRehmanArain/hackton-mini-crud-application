@@ -1,0 +1,57 @@
+auth,db,storage
+
+Mini hackthon 
+user panel,admin panel
+sign up ,sign in,
+db=>role
+
+form =>email,password,name,role=>select
+admin
+user
+
+db =>login=>
+role=>admin=>admin panel
+user=>panel 
+
+firebase classlink :
+https://drive.google.com/file/d/1R0fQjksi4a2fveoLRmn7UgAH8xKZv2yH/view?usp=sharing
+
+class link2:
+https://drive.google.com/file/d/1NARyUhKk4fwAOwLuDxED6p1cm_ZO18bk/view?usp=sharing
+
+class link3:
+https://drive.google.com/file/d/17V-tefn_Y-zBCLBarNAPh1Vo6OevAQh1/view?usp=sharing
+
+class link4:
+https://drive.google.com/file/d/1tJc4Qa7YWdN6oqtIzmSnOwdn_-GjOyG4/view?usp=sharing
+
+github code :
+https://github.com/MuhammadZubair786/Batch_2_Class_9_TO_11/tree/CRUD_FIREBASE
+
+https://github.com/MuhammadZubair786
+
+
+var btn = document.getElementsByTagName("button")
+var role = document.getElementsByName("role")
+var getrole=""
+
+
+console.log(role.value)
+
+btn[0].addEventListener("click",function(){
+   
+    for(var i=0;i<role.length;i++){
+        if(role[i].checked){
+            getrole=role[i].value
+            break
+
+        }
+    }
+    if(getrole==""){
+        alert("select one ")
+    }
+    else{
+        console.log(getrole)
+
+    }
+})
