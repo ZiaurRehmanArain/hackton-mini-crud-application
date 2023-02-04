@@ -57,9 +57,19 @@ window.location.href='login.html'
 
 })
 
-// logs.addEventListener("click",function(){
-//     window.location.href('login.html')
-// })
+logs.addEventListener("click",function(){
+    // window.location.href('login.html')
+    event.preventDefault()
+    console.log('ok')
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth()
+  .signInWithPopup(provider).then((user)=>{
+    console.log(user.user)
+  }).catch((e)=>{
+    console.log(e.message)
+  })
+
+})
 
 
 
