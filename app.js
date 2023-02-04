@@ -23,6 +23,7 @@ if(role.value=='user'){
     name:name1.value,
     password:password.value,
     role:role.value,
+    user_id:user.user.uid,
     }
     await firebase.database().ref("User/").child(`${user.user.uid}`).set(obj)
    console.log("user")
@@ -33,6 +34,8 @@ if(role.value=='user'){
         name:name1.value,
         password:password.value,
         role:role.value,
+    user_id:user.user.uid,
+
         }
     
    await firebase.database().ref("Admin/").child(`${user.user.uid}`).set(obj)
@@ -54,9 +57,19 @@ window.location.href='login.html'
 
 })
 
-// logs.addEventListener("click",function(){
-//     window.location.href('login.html')
-// })
+logs.addEventListener("click",function(){
+    // window.location.href('login.html')
+    event.preventDefault()
+    console.log('ok')
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth()
+  .signInWithPopup(provider).then((user)=>{
+    console.log(user.user)
+  }).catch((e)=>{
+    console.log(e.message)
+  })
+
+})
 
 
 
