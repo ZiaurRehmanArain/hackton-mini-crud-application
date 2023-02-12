@@ -5,6 +5,7 @@ var password=document.getElementById('Password')
 var role=document.getElementById('Role')
 var btn=document.getElementById('submit')
 var logs=document.getElementById('login')
+var flogs=document.getElementById('flogin')
 
 
 btn.addEventListener("click",async function(){
@@ -64,7 +65,21 @@ logs.addEventListener("click",function(){
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth()
   .signInWithPopup(provider).then((user)=>{
-    console.log(user.user)
+    console.log(user.user.displayName)
+  }).catch((e)=>{
+    console.log(e.message)
+  })
+
+})
+
+flogs.addEventListener("click",function(){
+    // window.location.href('login.html')
+    event.preventDefault()
+    console.log('ok')
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth()
+  .signInWithPopup(provider).then((user)=>{
+    console.log(user)
   }).catch((e)=>{
     console.log(e.message)
   })
